@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+
+</head>
+<body>
+    <h1>List User</h1>
+    <button type="button"><a href="{% url 'User_input' %} ">Hello</a>  </button>
+        <table>
+            <thead>
+                <th> Name </th>
+                <th> Date of Brith </th>
+                <th>Phone No</th>
+            </thead>
+
+            {% for data in users %}
+                <tr>
+                    <td>{{ data.user.password }}</td>
+                    <td>{{ data.dob }}</td>
+                    <td>{{ data.phone_no }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+</body>
+</html>
